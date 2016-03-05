@@ -20,7 +20,9 @@ Or install it yourself as:
 
 `OmniAuth::Strategies::Citrix` is simply a Rack middleware. Read the OmniAuth docs for detailed instructions: <https://github.com/intridea/omniauth>.
 
-Here's a quick example, adding the middleware to a Rails app in `config/initializers/omniauth.rb`:
+First, create a new application at https://developer.citrixonline.com/user/me/apps. Your callback URL must be something like `https://example.com/auth/citrix/callback`. For development you can use `http://127.0.0.1:3000/auth/citrix`.
+
+Here's a quick example, adding the middleware to a Rails app in `config/initializers/omniauth.rb`. This example assumes you're exporting your credentials as environment variables.
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
