@@ -38,15 +38,15 @@ describe OmniAuth::Strategies::Citrix do
     end
 
     it 'sets grant type' do
-      expect(strategy.token_params).to include(grant_type: 'authorization_code')
+      expect(strategy.token_params).to include('grant_type' => 'authorization_code')
     end
 
     it 'sets code' do
-      expect(strategy.token_params).to include(code: 'CODE')
+      expect(strategy.token_params).to include('code' => 'CODE')
     end
 
     it 'sets client id' do
-      expect(strategy.token_params).to include(client_id: 'consumer_id')
+      expect(strategy.token_params).to include('client_id' => 'consumer_id')
     end
   end
 

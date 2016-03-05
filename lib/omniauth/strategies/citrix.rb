@@ -17,9 +17,9 @@ module OmniAuth
 
       def token_params
         {
-          grant_type: 'authorization_code',
-          code: request.params['code'],
-          client_id: client.id
+          'grant_type' => 'authorization_code',
+          'code' => request.params['code'],
+          'client_id' => client.id
         }
       end
 
@@ -44,8 +44,8 @@ module OmniAuth
       def build_access_token
         client.auth_code.get_token(
           request.params['code'],
-          {redirect_uri: callback_url}.merge(token_params),
-          deep_symbolize(options.auth_token_params)
+          {'redirect_uri' => callback_url}.merge(token_params),
+          options.auth_token_params
         )
       end
     end
