@@ -1,2 +1,2 @@
-require 'omniauth-citrix/version'
-require 'omniauth/strategies/citrix'
+require "omniauth-citrix/version"
+require "omniauth/strategies/citrix"
