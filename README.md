@@ -1,5 +1,10 @@
 # Omniauth::Citrix
 
+[![Travis-CI](https://travis-ci.org/fnando/omniauth-citrix.png)](https://travis-ci.org/fnando/omniauth-citrix)
+[![CodeClimate](https://codeclimate.com/github/fnando/omniauth-citrix.png)](https://codeclimate.com/github/fnando/omniauth-citrix)
+[![Gem](https://img.shields.io/gem/v/omniauth-citrix.svg)](https://rubygems.org/gems/omniauth-citrix)
+[![Gem](https://img.shields.io/gem/dt/omniauth-citrix.svg)](https://rubygems.org/gems/omniauth-citrix)
+
 Citrix OAuth2 Strategy for OmniAuth.
 
 ## Installation
