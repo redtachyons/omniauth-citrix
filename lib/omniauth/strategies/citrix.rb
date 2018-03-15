@@ -5,8 +5,8 @@ module OmniAuth
   module Strategies
     class Citrix < OmniAuth::Strategies::OAuth2
       option :client_options, {
-        authorize_url: "https://api.citrixonline.com/oauth/authorize",
-        token_url: "https://api.citrixonline.com/oauth/access_token"
+        authorize_url: "https://api.getgo.com/oauth/v2/authorize",
+        token_url: "https://api.getgo.com/oauth/v2//access_token"
       }
 
       option :provider_ignores_state, true
