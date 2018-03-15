@@ -6,7 +6,7 @@ module OmniAuth
     class Citrix < OmniAuth::Strategies::OAuth2
       option :client_options, {
         authorize_url: "https://api.getgo.com/oauth/v2/authorize",
-        token_url: "https://api.getgo.com/oauth/v2//access_token"
+        token_url: "https://api.getgo.com/oauth/v2/access_token"
       }
 
       option :provider_ignores_state, true
@@ -37,6 +37,10 @@ module OmniAuth
           email: access_token.params["email"],
           platform: access_token.params["platform"]
         }
+      end
+      
+      def request_phase
+        redirect client.auth_code.authorize_url(authorize_params)
       end
 
       protected
